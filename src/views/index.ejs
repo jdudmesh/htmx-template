@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= title %></title>
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  </head>
+  <body class="w-screen h-screen flex flex-col items-stretch content-stretch">
+    <nav class="w-full p-4 grow-0">
+      <div id="app" class="text-xl">HTMX Template</div>
+    </nav>
+    <div
+      class="text-lg text-blue-800 p-4"
+      hx-get="/api/test"
+      hx-swap="innerHTML"
+      hx-trigger="load"
+    ></div>
+    <script src="/js/client.bundle.js"></script>
+  </body>
+</html>
